@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Animation</title>
+    
+    <link rel="stylesheet" type="text/css" href="static/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="static/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+        
+    
+</head>
+<body>
+    <div class="circle"></div>
+    <script>
+        const circle = document.querySelector(".circle");
+
+        document.addEventListener("mousemove", (e) => {
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+            circle.style.left = mouseX + 'px';
+            circle.style.top = mouseY + 'px';
+        });
+    </script>
+    <a href="">하이</ㅁ>
+
+
+</body>
+</html>
