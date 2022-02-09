@@ -1,0 +1,59 @@
+<html>
+ <head>
+  <title>클릭하면 펼쳐지는 메뉴</title>
+  <style type="text/css">
+   
+  </style>
+  <script language="javascript">
+   var menuStatus = 0;
+   
+   function toggleMenu() {
+    if (menuStatus == 0) {
+     menuStatus = 1;
+     handleMenu("show");
+    }
+    else {
+     menuStatus = 0;
+     handleMenu("hide");
+    }
+   }
+
+   function handleMenu(method) {
+    var offset = 5;
+    
+    var objMenu = document.getElementById("menu");
+    if (method == "show") {
+     if (parseInt(objMenu.style.height) < 200) {
+      objMenu.style.height = parseInt(objMenu.style.height) + offset + "px";
+      setTimeout("handleMenu('" + method + "')", 10);
+     }
+    }
+    else {
+     if (parseInt(objMenu.style.height) > 42) {
+      objMenu.style.height = parseInt(objMenu.style.height) - offset + "px";
+      setTimeout("handleMenu('" + method + "')", 10);
+     }
+    }
+   }
+  </script>
+ </head>
+ <body>
+  <div id="menu" style="position:absolute;
+  width:200px;border:solid 2px #FFA500;
+  background-color:#FFF900;
+  padding:5px 5px 5px 5px;
+  overflow:hidden;height:42px;
+  ">
+   <span onclick="toggleMenu()" style="cursor:hand">Menu1</span><br>
+    <span class="menu">SubMenu1</span><br>
+    <span class="menu">SubMenu2</span><br>
+    <span class="menu">SubMenu3</span><br>
+    <span class="menu">SubMenu4</span><br>
+    <span class="menu">SubMenu5</span>
+  </div>
+ </body>
+</html>
+
+
+
+{% comment %} 출처: https://superes.tistory.com/32 [SUPERES DEV] {% endcomment %}

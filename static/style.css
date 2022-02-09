@@ -8,3 +8,25 @@
   background-color: #ee6c4d;
   transform: translate(-50%, -50%);
 }
+
+.img1{
+  top: 400px;
+  left: 200px;
+}
+
+
+body {
+  font-family:verdana;
+  line-height:180%;
+ }
+ 
+ span {
+  color:#000000;
+  font-weight:bold;
+  font-size:12pt
+ }
+ 
+ span.menu {
+  color:#339900;
+  font-weight:normal;
+ }
