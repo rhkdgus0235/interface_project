@@ -27,6 +27,57 @@
                 border-bottom-right-radius: 10%;
                 
             }
+            #slideright1, #panel1 {
+                padding: 10px;
+                text-align: center;
+                margin:0;
+                width: 10%;
+                height: 10%;
+                
+                
+            }
+            #panel1 {
+                margin:0;
+                padding: 10px;
+                display: none;
+                
+                
+                
+            }
+            #slideright2, #panel2 {
+                padding: 10px;
+                text-align: center;
+                margin:0;
+                width: 10%;
+                height: 10%;
+                
+                
+            }
+            #panel2 {
+                margin:0;
+                padding: 10px;
+                display: none;
+                
+                
+                
+            }
+            #slideright3, #panel3 {
+                padding: 10px;
+                text-align: center;
+                margin:0;
+                width: 10%;
+                height: 10%;
+                
+                
+            }
+            #panel3 {
+                margin:0;
+                padding: 10px;
+                display: none;
+                
+                
+                
+            }
             .homepad{
                 position:static;
             }
@@ -35,14 +86,23 @@
                 left: 85%;
                 top: 10px;
             }
+            .makleft{
+                position: relative;
+                left:5%;
+                top:50px;
+            }
+        
+
             
         </style>
+        <div style="text-align: center;">Achieve재배치</div>
     </head>
  
-    <body>
+    <body style="overflow-x: hidden">
         <!-- 메뉴바를 두 부분으로 나누고 마우스를 올릴곳과 나타날 곳을 만들고 이 둘을 묶을 div를 만든다. -->
-        <!-- <span>home</span> -->
-        <div id="menu" style="margin-top:10px; " class="sticky-right makright">
+        <div class="container-fluid sticky-top" style="height: 50px;">
+        <span class="makleft"><a href="https://www.naver.com/"><img src="home.png"></a></span>
+        <div id="menu" style="margin-top:10px; " class="makright">
             <!-- 마우스가 올라가는 부분 -->
             <div></div>
             <div id="slide">메뉴</div>
@@ -61,7 +121,74 @@
                 </ul>
             </div>
         </div>
+        </div>
+        <div class="container-fluid">
+        <div style="text-align: center;"><img src="achieve.png"></div>
+        <div style="text-align: center;">WHAT WE NEED TO RESERVE</div>
+        <div style="text-align: center;">WHAT WE ACHIEVE</div>
+        <div class="container mb-3"></div>
         
+        <div></div>
+        <div><img src="blank.png"></div>
+        <div><hr style="width:90%; size:10px" ></div>
+        
+        <div id="texts1" style="position: relative; left:5%; top:20px ">
+            
+            
+            <span id="slideright1" style="margin-right:0px"><img src="replacebox.png"></span>
+            
+            <span id="panel1">
+                <span><img src="replacebox.png"></span>
+            </span>
+        </div>
+
+        <div id="texts2" style="position: relative; left:15%; top:20px ">
+            
+            
+            <span id="slideright2" style="margin-right:0px"><img src="replacebox.png"></span>
+            
+            <span id="panel2">
+                <span><img src="replacebox.png"></span>
+            </span>
+        </div>
+
+        <div id="texts3" style="position: relative; left:25%; top:20px ">
+            
+            
+            <span id="slideright3" style="margin-right:0px"><img src="replacebox.png"></span>
+            
+            <span id="panel3">
+                <span><img src="replacebox.png"></span>
+            </span>
+        </div>
+
+        
+        <div>아카이브</div>
+        <div>아카이브</div>
+        <div>아카이브</div>
+        <div>아카이브</div>
+        <div>아카이브</div>
+        <div>아카이브</div>
+        <div>아카이브</div>
+        <div>아카이브</div>
+        <div>아카이브</div>
+        <div>아카이브</div>
+        <div>아카이브</div>
+        <div>아카이브</div>
+        <div>아카이브</div>
+        <div>아카이브</div>
+        <div>아카이브</div>
+        <div>아카이브</div>
+        <div>아카이브</div>
+        <div>아카이브</div>
+        <div>아카이브</div>
+        <div>아카이브</div>
+       
+        </div>
+        
+        <footer>
+            <em>test by 301D</em>
+          </footer>
         <!-- 제이쿼리 가져옴 -->
         <script  src="static/jquery-3.6.0.min.js"></script>
         <script>
@@ -81,8 +208,44 @@
                      $("#panel")                        //mouseenter이벤트 시의 동작이 일어나지 않음
                      .css({color: "blue"})              //css수정
                      .slideUp(500)                      //display가 none에서 block으로 바뀌면서 슬라이드 효과가 생기면서 보여지게 됨
+                })
+                $("#slideright1").mouseenter(function(){
+                    timer=setTimeout(function(){
+                        $("#panel1").show(1000)
+                    },100);
+                })
+                $("#texts1").mouseleave(function(){
+                    clearTimeout(timer);
+                    $("#panel1")
+                    .hide(1000)
+                })
+                $("#slideright2").mouseenter(function(){
+                    timer=setTimeout(function(){
+                        $("#panel2").show(1000)
+                    },100);
+                })
+                $("#texts2").mouseleave(function(){
+                    clearTimeout(timer);
+                    $("#panel2")
+                    .hide(1000)
+                })
+                $("#slideright3").mouseenter(function(){
+                    timer=setTimeout(function(){
+                        $("#panel3").show(1000)
+                    },100);
+                })
+                $("#texts3").mouseleave(function(){
+                    clearTimeout(timer);
+                    $("#panel3")
+                    .hide(1000)
                 });
+                
             });
+
+
         </script>
     </body>
 </html>
+
+<!-- $(this).hide("slide", { direction: "left" }, 1000);
+$(this).show("slide", { direction: "left" }, 1000); -->
