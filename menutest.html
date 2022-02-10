@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html leng="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>document</title>
+        <link rel="stylesheet" type="text/css" href="static/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="static/style.css" />
+        <style> 
+            #slide, #panel {
+                padding: 10px 10px;
+                text-align: center;
+                background-color: #e5eecc;
+                border: solid 1px #c3c3c3;
+                width: 10%;
+                height: 10%;
+                
+                /* border-top-left-radius: 10%;
+                border-top-right-radius: 10%; */
+            }
+            /* #penel의 스타일의 기본이 display:none으로 되어 있다.  */
+            #panel {
+                padding: 10px;
+                display: none;
+                background-color: #e5eecc; 
+                border-bottom-left-radius: 10%;
+                border-bottom-right-radius: 10%;
+                
+            }
+            #slideright1, #panel1 {
+                padding: 60px 20px;
+                text-align: center;
+                margin:0;
+                width: 10%;
+                height: 10%;
+                
+                
+            }
+            #panel1 {
+                margin:0;
+                padding: 60px 20px;
+                display: none;
+                
+                
+                
+            }
+            #slideright2, #panel2 {
+                padding: 10px;
+                text-align: center;
+                margin:0;
+                width: 10%;
+                height: 10%;
+                
+                
+            }
+            #panel2 {
+                margin:0;
+                padding: 10px;
+                display: none;
+                
+                
+                
+            }
+            #slideright3, #panel3 {
+                padding: 10px;
+                text-align: center;
+                margin:0;
+                width: 10%;
+                height: 10%;
+                
+                
+            }
+            #panel3 {
+                margin:0;
+                padding: 10px;
+                display: none;
+                
+                
+                
+            }
+            #slideright4, #panel4 {
+                padding: 10px;
+                text-align: center;
+                margin:0;
+                width: 10%;
+                height: 10%;
+                
+                
+            }
+            #panel4 {
+                margin:0;
+                padding: 10px;
+                display: none;
+                
+                
+                
+            }
+            #slideright5, #panel5 {
+                padding: 10px;
+                text-align: center;
+                margin:0;
+                width: 10%;
+                height: 10%;
+                
+                
+            }
+            #panel5 {
+                margin:0;
+                padding: 10px;
+                display: none;
+                
+                
+                
+            }
+            #slideright6, #panel6 {
+                padding: 10px;
+                text-align: center;
+                margin:0;
+                width: 10%;
+                height: 10%;
+                
+                
+            }
+            #panel6 {
+                margin:0;
+                padding: 10px;
+                display: none;
+                
+                
+                
+            }
+            #slideright7, #panel7 {
+                padding: 10px;
+                text-align: center;
+                margin:0;
+                width: 10%;
+                height: 10%;
+                
+                
+            }
+            #panel7 {
+                margin:0;
+                padding: 10px;
+                display: none;
+                
+                
+                
+            }
+            #slideright8, #panel8 {
+                padding: 10px;
+                text-align: center;
+                margin:0;
+                width: 10%;
+                height: 10%;
+                
+                
+            }
+            #panel8 {
+                margin:0;
+                padding: 10px;
+                display: none;
+                
+                
+                
+            }
+
+
+
+
+
+            .homepad{
+                position:static;
+            }
+            .makright{
+                position: relative;
+                left: 85%;
+                top: 10px;
+            }
+            .makright2{
+                position: relative;
+                left:77%;
+                top:50px;
+            }
+            footer{
+                
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: #111;
+                height: auto;
+                width: 100vw;
+                padding-top: 140px;
+                color: #fff;
+
+            }
+            input{
+                background-color: black;
+                color:white;
+                font-size:15px;
+                text-align: center;
+                border: 1px solid white;
+                border-radius: 20px;
+                margin-top: 2em;
+                display: inline-block;
+                transition: background 0.5s ease-in-out,color 0.5s ease-in-out;
+
+            }
+            input:hover{
+                background-color: white;
+                color: black;
+            }
+        
+            
+
+            
+        </style>
+        <script>
+            // 링크 색 바꾸기
+            function LinkSetColor(color){
+                var alist = document.querySelectorAll('a');
+                for(var i = 0; i < alist.length; i++)
+                    alist[i].style.color = color;
+            }
+    
+            // 바디 글자색 바꾸기
+            function BodySetColor(color){
+                document.querySelector('body').style.color = color;
+                
+                
+
+            }
+    
+            // 바디 배경색 바꾸기
+            function BodySetBackgroundColor(color){
+                document.querySelector('body').style.backgroundColor = color;
+            }
+    
+            // 주간, 야간모드
+            function day_night_handler(self) {
+                var target = document.querySelector('body');
+                if (self.value == 'day') {
+                    BodySetBackgroundColor('RGB(17,17,17)');
+                    BodySetColor('white');
+                    LinkSetColor('powderblue')
+                    self.value = 'night';
+                }
+                else {
+                    BodySetBackgroundColor('white');
+                    BodySetColor('black');
+                    LinkSetColor('blue')
+                    self.value = 'day';
+                }
+            }
+        </script>
+        <div style="text-align: center;">Achieve재배치</div>
+    </head>
+ 
+    <body style="overflow-x: hidden">
+        <!-- 메뉴바를 두 부분으로 나누고 마우스를 올릴곳과 나타날 곳을 만들고 이 둘을 묶을 div를 만든다. -->
+        <div class="container-fluid sticky-top" style="height: 50px;">
+        <span class="makright2"><a href="https://www.naver.com/"><img src="home.png"></a></span>
+        <div id="menu" style="margin-top:10px; " class="makright">
+            <!-- 마우스가 올라가는 부분 -->
+            <div></div>
+            <div id="slide">메뉴</div>
+            <!-- 처음엔 안보였다 나중에 보이는 부분 -->
+            <div id="panel">
+                <ul>
+                    <li>
+                <a href="https://www.naver.com/">하이</a>
+                    </li>
+                    <li>
+                <a href="github.com">니하옹</a>    
+                    </li>
+                    <li>
+                <a href="#">하이루</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <div class="container-fluid">
+        <div style="text-align: center;"><img src="achieve.png"></div>
+        <div style="text-align: center;">WHAT WE NEED TO RESERVE</div>
+        <div style="text-align: center;">WHAT WE ACHIEVE</div>
+        <div class="container mb-3"></div>
+        
+        <div></div>
+        <div style="padding: 100px;"></div>
+        <div style="text-align: center;">해야하는 이유</div>
+        <div><hr style="width:90%;" ></div>
+        <div style="padding: 30px 0px;"></div>
+        <marquee style="font-size: 50px; padding: 30px 0px;" scrolldelay="5"><div>왜 why? 나니 웨이션머</div></marquee>
+        <marquee direction="right" style="font-size: 50px; padding: 30px 0px;"><div>왜 why? 나니 웨이션머</div></marquee>
+        <div style="padding: 50px 0px;"></div>
+        <div style="text-align: center;">인트로</div>
+        <div><hr style="width:90%;" ></div>
+        
+        
+        <div id="texts1" style="position: relative; left:5%; top:20px ">
+            
+            
+            <span id="slideright1" style="margin-right:0px"><img src="solar.gif"></span>
+            
+            <div id="panel1">
+                <div class="container0" style="padding: 50px">글자나가는거랑 다크모드테스트</div>
+        </div>
+            
+        </div>
+        <div style="padding: 50px 0px;"></div>
+
+        <div id="texts2" style="position: relative; left:15%; top:20px ">
+            
+            
+            <span id="slideright2" style="margin-right:0px"><img src="replacebox.png"></span>
+            
+            <span id="panel2">
+                <span><img src="replacebox.png"></span>
+            </span>
+        </div>
+
+        <div id="texts3" style="position: relative; left:25%; top:20px ">
+            
+            
+            <span id="slideright3" style="margin-right:0px"><img src="replacebox.png"></span>
+            
+            <span id="panel3">
+                <span><img src="replacebox.png"></span>
+            </span>
+        </div>
+
+        <div id="texts4" style="position: relative; left:35%; top:20px ">
+            
+            
+            <span id="slideright4" style="margin-right:0px"><img src="replacebox.png"></span>
+            
+            <span id="panel4">
+                <span><img src="replacebox.png"></span>
+            </span>
+        </div>
+        <div style="padding: 50px 0px"></div>
+        <div style="text-align: center">에너지절약방법</div>
+        <div><hr style="width:90%; size:10px" ></div>
+        
+        <div id="texts5" style="position: relative; left:5%; top:20px ">
+            
+            
+            <span id="slideright5" style="margin-right:0px"><img src="replacebox.png"></span>
+            
+            <span id="panel5">
+                <span><img src="replacebox.png"></span>
+            </span>
+        </div>
+
+        <div id="texts6" style="position: relative; left:15%; top:20px ">
+            
+            
+            <span id="slideright6" style="margin-right:0px"><img src="replacebox.png"></span>
+            
+            <span id="panel6">
+                <span><img src="replacebox.png"></span>
+            </span>
+        </div>
+
+        <div id="texts7" style="position: relative; left:25%; top:20px ">
+            
+            
+            <span id="slideright7" style="margin-right:0px"><img src="replacebox.png"></span>
+            
+            <span id="panel7">
+                <span><img src="replacebox.png"></span>
+            </span>
+        </div>
+
+        <div id="texts8" style="position: relative; left:35%; top:20px ">
+            
+            
+            <span id="slideright8" style="margin-right:0px"><img src="replacebox.png"></span>
+            
+            <span id="panel8">
+                <span><img src="replacebox.png"></span>
+            </span>
+        </div>
+        <div style="padding: 50px 0px"></div>
+
+
+        </div>
+        
+        <footer>
+            
+            <div>test by 301D</div>
+            <input type="button" value="day" style=" position: relative;left: 95%;" onclick="day_night_handler(this)">
+
+          </footer>
+        <!-- 제이쿼리 가져옴 -->
+        <script  src="static/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                // timer변수를 만들어 약간의 딜레이를 줄건데 딜레이가 없으면 마우스가 지나갈 때마다
+                // 메뉴바가 나오고 사라지고 해서 눈에 거슬림 
+                var timer;
+                $("#slide").mouseenter(function(){      //#slide에 mouseenter이벤트를 만듬
+                     timer = setTimeout(function() {       //딜레이를 설정하면서 (0.1초) 해당 시간 후에 아래와 같은 동작을 함 
+                        $("#panel").not(':animated')        //에니메이션이 Queue에 쌓이는 것을 방지하기 위해서  not(':animated')설정을 해준다.
+                        .css({color: "red"})                //css수정
+                        .slideDown(500)                     //display가 none에서 block으로 바뀌면서 슬라이드 효과가 생기면서 보여지게 됨
+                     }, 100);           
+                })
+                $("#menu").mouseleave(function(){       //#menu에 mouseleave이벤트를 만듬
+                     clearTimeout(timer);               //위에서 딜레이를 설정하고 그 시간 안에 mouseleave 이벤트가 일어나면 해당 timer변수가 사라져서
+                     $("#panel")                        //mouseenter이벤트 시의 동작이 일어나지 않음
+                     .css({color: "blue"})              //css수정
+                     .slideUp(500)                      //display가 none에서 block으로 바뀌면서 슬라이드 효과가 생기면서 보여지게 됨
+                })
+                $("#slideright1").mouseenter(function(){
+                    timer=setTimeout(function(){
+                        $("#panel1").toggle( {direction: "right" }, 1000)
+                    },100);
+                })
+
+                
+
+                $("#texts1").mouseleave(function(){
+                    clearTimeout(timer);
+                    $("#panel1")
+                    .toggle("swing")
+                })
+                $("#slideright2").mouseenter(function(){
+                    timer=setTimeout(function(){
+                        $("#panel2").show(1000)
+                    },100);
+                })
+                $("#texts2").mouseleave(function(){
+                    clearTimeout(timer);
+                    $("#panel2")
+                    .hide(1000)
+                })
+                $("#slideright3").mouseenter(function(){
+                    timer=setTimeout(function(){
+                        $("#panel3").show(1000)
+                    },100);
+                })
+                $("#texts3").mouseleave(function(){
+                    clearTimeout(timer);
+                    $("#panel3")
+                    .hide(1000)
+                })
+                $("#slideright4").mouseenter(function(){
+                    timer=setTimeout(function(){
+                        $("#panel4").show(1000)
+                    },100);
+                })
+                $("#texts4").mouseleave(function(){
+                    clearTimeout(timer);
+                    $("#panel4")
+                    .hide(1000)
+                })
+                $("#slideright5").mouseenter(function(){
+                    timer=setTimeout(function(){
+                        $("#panel5").show(1000)
+                    },100);
+                })
+                $("#texts5").mouseleave(function(){
+                    clearTimeout(timer);
+                    $("#panel5")
+                    .hide(1000)
+                })
+                $("#slideright6").mouseenter(function(){
+                    timer=setTimeout(function(){
+                        $("#panel6").show(1000)
+                    },100);
+                })
+                $("#texts6").mouseleave(function(){
+                    clearTimeout(timer);
+                    $("#panel6")
+                    .hide(1000)
+                })
+                $("#slideright7").mouseenter(function(){
+                    timer=setTimeout(function(){
+                        $("#panel7").show(1000)
+                    },100);
+                })
+                $("#texts7").mouseleave(function(){
+                    clearTimeout(timer);
+                    $("#panel7")
+                    .hide(1000)
+                })
+                $("#slideright8").mouseenter(function(){
+                    timer=setTimeout(function(){
+                        $("#panel8").show(1000)
+                    },100);
+                })
+                $("#texts8").mouseleave(function(){
+                    clearTimeout(timer);
+                    $("#panel8")
+                    .hide(1000)
+                });
+                
+            });
+
+
+        </script>
+    </body>
+</html>
