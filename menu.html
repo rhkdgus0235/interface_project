@@ -78,6 +78,96 @@
                 
                 
             }
+            #slideright4, #panel4 {
+                padding: 10px;
+                text-align: center;
+                margin:0;
+                width: 10%;
+                height: 10%;
+                
+                
+            }
+            #panel4 {
+                margin:0;
+                padding: 10px;
+                display: none;
+                
+                
+                
+            }
+            #slideright5, #panel5 {
+                padding: 10px;
+                text-align: center;
+                margin:0;
+                width: 10%;
+                height: 10%;
+                
+                
+            }
+            #panel5 {
+                margin:0;
+                padding: 10px;
+                display: none;
+                
+                
+                
+            }
+            #slideright6, #panel6 {
+                padding: 10px;
+                text-align: center;
+                margin:0;
+                width: 10%;
+                height: 10%;
+                
+                
+            }
+            #panel6 {
+                margin:0;
+                padding: 10px;
+                display: none;
+                
+                
+                
+            }
+            #slideright7, #panel7 {
+                padding: 10px;
+                text-align: center;
+                margin:0;
+                width: 10%;
+                height: 10%;
+                
+                
+            }
+            #panel7 {
+                margin:0;
+                padding: 10px;
+                display: none;
+                
+                
+                
+            }
+            #slideright8, #panel8 {
+                padding: 10px;
+                text-align: center;
+                margin:0;
+                width: 10%;
+                height: 10%;
+                
+                
+            }
+            #panel8 {
+                margin:0;
+                padding: 10px;
+                display: none;
+                
+                
+                
+            }
+
+
+
+
+
             .homepad{
                 position:static;
             }
@@ -86,22 +176,88 @@
                 left: 85%;
                 top: 10px;
             }
-            .makleft{
+            .makright2{
                 position: relative;
-                left:5%;
+                left:77%;
                 top:50px;
+            }
+            footer{
+                
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: #111;
+                height: auto;
+                width: 100vw;
+                padding-top: 140px;
+                color: #fff;
+
+            }
+            input{
+                background-color: black;
+                color:white;
+                font-size:15px;
+                text-align: center;
+                border: 1px solid white;
+                border-radius: 20px;
+                margin-top: 2em;
+                display: inline-block;
+                transition: background 0.5s ease-in-out,color 0.5s ease-in-out;
+
+            }
+            input:hover{
+                background-color: white;
+                color: black;
             }
         
 
             
         </style>
+        <script>
+            // 링크 색 바꾸기
+            function LinkSetColor(color){
+                var alist = document.querySelectorAll('a');
+                for(var i = 0; i < alist.length; i++)
+                    alist[i].style.color = color;
+            }
+    
+            // 바디 글자색 바꾸기
+            function BodySetColor(color){
+                document.querySelector('body').style.color = color;
+                
+                
+
+            }
+    
+            // 바디 배경색 바꾸기
+            function BodySetBackgroundColor(color){
+                document.querySelector('body').style.backgroundColor = color;
+            }
+    
+            // 주간, 야간모드
+            function day_night_handler(self) {
+                var target = document.querySelector('body');
+                if (self.value == 'day') {
+                    BodySetBackgroundColor('RGB(17,17,17)');
+                    BodySetColor('white');
+                    LinkSetColor('powderblue')
+                    self.value = 'night';
+                }
+                else {
+                    BodySetBackgroundColor('white');
+                    BodySetColor('black');
+                    LinkSetColor('blue')
+                    self.value = 'day';
+                }
+            }
+        </script>
         <div style="text-align: center;">Achieve재배치</div>
     </head>
  
     <body style="overflow-x: hidden">
         <!-- 메뉴바를 두 부분으로 나누고 마우스를 올릴곳과 나타날 곳을 만들고 이 둘을 묶을 div를 만든다. -->
         <div class="container-fluid sticky-top" style="height: 50px;">
-        <span class="makleft"><a href="https://www.naver.com/"><img src="home.png"></a></span>
+        <span class="makright2"><a href="https://www.naver.com/"><img src="home.png"></a></span>
         <div id="menu" style="margin-top:10px; " class="makright">
             <!-- 마우스가 올라가는 부분 -->
             <div></div>
@@ -129,18 +285,28 @@
         <div class="container mb-3"></div>
         
         <div></div>
-        <div><img src="blank.png"></div>
-        <div><hr style="width:90%; size:10px" ></div>
+        <div style="padding: 100px;"></div>
+        <div style="text-align: center;">해야하는 이유</div>
+        <div><hr style="width:90%;" ></div>
+        <div style="padding: 30px 0px;"></div>
+        <marquee style="font-size: 50px; padding: 30px 0px;" scrolldelay="5"><div>왜 why? 나니 웨이션머</div></marquee>
+        <marquee direction="right" style="font-size: 50px; padding: 30px 0px;"><div>왜 why? 나니 웨이션머</div></marquee>
+        <div style="padding: 50px 0px;"></div>
+        <div style="text-align: center;">인트로</div>
+        <div><hr style="width:90%;" ></div>
+        
         
         <div id="texts1" style="position: relative; left:5%; top:20px ">
             
             
-            <span id="slideright1" style="margin-right:0px"><img src="replacebox.png"></span>
+            <span id="slideright1" style="margin-right:0px"><img src="solar.gif"></span>
             
             <span id="panel1">
-                <span><img src="replacebox.png"></span>
+                <span class="container0" style="padding: 50px">글자나가는거랑 다크모드테스트</span>
             </span>
+            
         </div>
+        <div style="padding: 50px 0px;"></div>
 
         <div id="texts2" style="position: relative; left:15%; top:20px ">
             
@@ -162,32 +328,68 @@
             </span>
         </div>
 
+        <div id="texts4" style="position: relative; left:35%; top:20px ">
+            
+            
+            <span id="slideright4" style="margin-right:0px"><img src="replacebox.png"></span>
+            
+            <span id="panel4">
+                <span><img src="replacebox.png"></span>
+            </span>
+        </div>
+        <div style="padding: 50px 0px"></div>
+        <div style="text-align: center">에너지절약방법</div>
+        <div><hr style="width:90%; size:10px" ></div>
         
-        <div>아카이브</div>
-        <div>아카이브</div>
-        <div>아카이브</div>
-        <div>아카이브</div>
-        <div>아카이브</div>
-        <div>아카이브</div>
-        <div>아카이브</div>
-        <div>아카이브</div>
-        <div>아카이브</div>
-        <div>아카이브</div>
-        <div>아카이브</div>
-        <div>아카이브</div>
-        <div>아카이브</div>
-        <div>아카이브</div>
-        <div>아카이브</div>
-        <div>아카이브</div>
-        <div>아카이브</div>
-        <div>아카이브</div>
-        <div>아카이브</div>
-        <div>아카이브</div>
-       
+        <div id="texts5" style="position: relative; left:5%; top:20px ">
+            
+            
+            <span id="slideright5" style="margin-right:0px"><img src="replacebox.png"></span>
+            
+            <span id="panel5">
+                <span><img src="replacebox.png"></span>
+            </span>
+        </div>
+
+        <div id="texts6" style="position: relative; left:15%; top:20px ">
+            
+            
+            <span id="slideright6" style="margin-right:0px"><img src="replacebox.png"></span>
+            
+            <span id="panel6">
+                <span><img src="replacebox.png"></span>
+            </span>
+        </div>
+
+        <div id="texts7" style="position: relative; left:25%; top:20px ">
+            
+            
+            <span id="slideright7" style="margin-right:0px"><img src="replacebox.png"></span>
+            
+            <span id="panel7">
+                <span><img src="replacebox.png"></span>
+            </span>
+        </div>
+
+        <div id="texts8" style="position: relative; left:35%; top:20px ">
+            
+            
+            <span id="slideright8" style="margin-right:0px"><img src="replacebox.png"></span>
+            
+            <span id="panel8">
+                <span><img src="replacebox.png"></span>
+            </span>
+        </div>
+        <div style="padding: 50px 0px"></div>
+
+
         </div>
         
         <footer>
-            <em>test by 301D</em>
+            
+            <div>test by 301D</div>
+            <input type="button" value="day" style=" position: relative;left: 95%;" onclick="day_night_handler(this)">
+
           </footer>
         <!-- 제이쿼리 가져옴 -->
         <script  src="static/jquery-3.6.0.min.js"></script>
@@ -211,7 +413,7 @@
                 })
                 $("#slideright1").mouseenter(function(){
                     timer=setTimeout(function(){
-                        $("#panel1").show(1000)
+                        $("#panel1").show(600)
                     },100);
                 })
                 $("#texts1").mouseleave(function(){
@@ -238,6 +440,56 @@
                     clearTimeout(timer);
                     $("#panel3")
                     .hide(1000)
+                })
+                $("#slideright4").mouseenter(function(){
+                    timer=setTimeout(function(){
+                        $("#panel4").show(1000)
+                    },100);
+                })
+                $("#texts4").mouseleave(function(){
+                    clearTimeout(timer);
+                    $("#panel4")
+                    .hide(1000)
+                })
+                $("#slideright5").mouseenter(function(){
+                    timer=setTimeout(function(){
+                        $("#panel5").show(1000)
+                    },100);
+                })
+                $("#texts5").mouseleave(function(){
+                    clearTimeout(timer);
+                    $("#panel5")
+                    .hide(1000)
+                })
+                $("#slideright6").mouseenter(function(){
+                    timer=setTimeout(function(){
+                        $("#panel6").show(1000)
+                    },100);
+                })
+                $("#texts6").mouseleave(function(){
+                    clearTimeout(timer);
+                    $("#panel6")
+                    .hide(1000)
+                })
+                $("#slideright7").mouseenter(function(){
+                    timer=setTimeout(function(){
+                        $("#panel7").show(1000)
+                    },100);
+                })
+                $("#texts7").mouseleave(function(){
+                    clearTimeout(timer);
+                    $("#panel7")
+                    .hide(1000)
+                })
+                $("#slideright8").mouseenter(function(){
+                    timer=setTimeout(function(){
+                        $("#panel8").show(1000)
+                    },100);
+                })
+                $("#texts8").mouseleave(function(){
+                    clearTimeout(timer);
+                    $("#panel8")
+                    .hide(1000)
                 });
                 
             });
@@ -247,5 +499,3 @@
     </body>
 </html>
 
-<!-- $(this).hide("slide", { direction: "left" }, 1000);
-$(this).show("slide", { direction: "left" }, 1000); -->
