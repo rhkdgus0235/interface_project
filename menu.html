@@ -2,7 +2,7 @@
 <html leng="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">
         <title>document</title>
         <link rel="stylesheet" type="text/css" href="static/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="static/style.css" />
@@ -164,7 +164,216 @@
                 
             }
 
+ /* h1단 */
+        
 
+
+
+
+            h1 {
+            font-family: Roboto, sans-serif;
+            font-weight: 100;
+            font-size: 30px;
+            background: linear-gradient(15deg, #00a9f1, #cf00f1);
+            margin: 0;
+            padding: 30px;
+            text-transform: uppercase;
+            }
+            @media (max-width: 700px) {
+            h1 {
+                padding: 20px;
+                font-size: 40px;
+            }
+            }
+            h1 span {
+            display: inline-block;
+            transition: transform 0.6s cubic-bezier(0.65, 0.02, 0.23, 1);
+            transform: translate(20%, 100%);
+            position: relative;
+            z-index: 1;
+            letter-spacing: -0.03em;
+            text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.1);
+            }
+            h1 span:before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            left: 0;
+            width: 30%;
+            height: 30%;
+            transform: translateY(-40%);
+            transition: transform 0.6s cubic-bezier(0.65, 0.02, 0.23, 1);
+            }
+            h1 span.row {
+            overflow: hidden;
+            line-height: 0.9;
+            display: block;
+            transform: none;
+            }
+            h1 span.row:before {
+            display: none;
+            }
+            h1 .animate {
+            transform: translate(0, 0);
+            }
+            h1 .animate:before {
+            transform: translateY(100%);
+            }
+            
+
+/* h1단 */
+
+/* hi단 */
+
+            @import url(https://fonts.googleapis.com/css?family=Finger+Paint);
+            fading {
+            background: transparent;
+            overflow: hidden;
+            font: 1vw/10vh "Finger Paint";
+            text-align: center;
+            color: black;
+            backface-visibility: hidden;
+            }
+
+            hi span {
+            display: inline-block;
+            text-shadow: 0 0 0 whitesmoke;
+            animation: smoky 5s 3s both;
+            }
+
+            hi span:nth-child(even) {
+            animation-name: smoky-mirror;
+            }
+
+            @keyframes smoky {
+                60% {
+                    text-shadow: 0 0 40px whitesmoke;
+                }
+                to {
+                    transform: translate3d(4rem, -3rem, 0) rotate(-40deg) skewX(70deg) scale(1.5);
+                    text-shadow: 0 0 20px whitesmoke;
+                    opacity: 0;
+                }
+            }
+            @keyframes smoky-mirror {
+                60% {
+                    text-shadow: 0 0 40px whitesmoke;
+                }
+                to {
+                    transform: translate3d(5rem, -3rem, 0) rotate(-40deg) skewX(-70deg) scale(2);
+                    text-shadow: 0 0 20px whitesmoke;
+                    opacity: 0;
+                }
+            }
+            hi span:nth-of-type(1) {
+            animation-delay: 3.1s;
+            }
+
+            hi span:nth-of-type(2) {
+            animation-delay: 3.2s;
+            }
+
+            hi span:nth-of-type(3) {
+            animation-delay: 3.3s;
+            }
+
+            hi span:nth-of-type(4) {
+            animation-delay: 3.4s;
+            }
+
+            hi span:nth-of-type(5) {
+            animation-delay: 3.5s;
+            }
+
+            hi span:nth-of-type(6) {
+            animation-delay: 3.6s;
+            }
+
+            hi span:nth-of-type(7) {
+            animation-delay: 3.7s;
+            }
+
+            hi span:nth-of-type(8) {
+            animation-delay: 3.8s;
+            }
+
+            hi span:nth-of-type(9) {
+            animation-delay: 3.9s;
+            }
+
+            hi span:nth-of-type(10) {
+            animation-delay: 4s;
+            }
+
+            hi span:nth-of-type(11) {
+            animation-delay: 4.1s;
+            }
+
+            span:nth-of-type(12) {
+            animation-delay: 4.2s;
+            }
+
+            hi span:nth-of-type(13) {
+            animation-delay: 4.3s;
+            }
+
+            hi span:nth-of-type(14) {
+            animation-delay: 4.4s;
+            }
+
+            hi span:nth-of-type(15) {
+            animation-delay: 4.5s;
+            }
+
+            hi span:nth-of-type(16) {
+            animation-delay: 4.6s;
+            }
+
+            hi span:nth-of-type(17) {
+            animation-delay: 4.7s;
+            }
+
+            hi span:nth-of-type(18) {
+            animation-delay: 4.8s;
+            }
+
+            hi span:nth-of-type(19) {
+            animation-delay: 4.9s;
+            }
+
+            hi span:nth-of-type(20) {
+            animation-delay: 5s;
+            }
+
+            hi span:nth-of-type(21) {
+            animation-delay: 5.1s;
+            }
+            hi span:nth-of-type(22) {
+            animation-delay: 5.2s;
+            }
+            hi span:nth-of-type(23) {
+            animation-delay: 5.3s;
+            }
+            hi span:nth-of-type(24) {
+            animation-delay: 5.4s;
+            }
+            hi span:nth-of-type(25) {
+            animation-delay: 5.5s;
+            }
+            hi span:nth-of-type(26) {
+            animation-delay: 5.6s;
+            }
+            hi span:nth-of-type(27) {
+            animation-delay: 5.7s;
+            }
+            hi span:nth-of-type(28) {
+            animation-delay: 5.8s;
+            }
+
+
+
+/* hi단 */
 
 
 
@@ -292,6 +501,16 @@
         <marquee style="font-size: 50px; padding: 30px 0px;" scrolldelay="5"><div>왜 why? 나니 웨이션머</div></marquee>
         <marquee direction="right" style="font-size: 50px; padding: 30px 0px;"><div>왜 why? 나니 웨이션머</div></marquee>
         <div style="padding: 50px 0px;"></div>
+        <h1 class="strip" style="width: 700px; margin:auto">
+                대중들에게 자원과 에너지<br>
+                e.g. 한국은 원자력을 제외한<br>
+                에너지를 생산할수 있는 자원
+        </h1>
+        <div style="padding: 50px 0px;"></div>
+
+        <!-- <div class="container mb-3" style="width: 90%; height: 400px;"></div> -->
+        <div style="padding: 50px 0px;"></div>
+
         <div style="text-align: center;">인트로</div>
         <div><hr style="width:90%;" ></div>
         
@@ -302,7 +521,12 @@
             <span id="slideright1" style="margin-right:0px"><img src="solar.gif"></span>
             
             <span id="panel1">
-                <span class="container0" style="padding: 50px">글자나가는거랑 다크모드테스트</span>
+                <span class="container" >ddddddd
+                
+             </span>
+                    
+               
+                
         </span>
             
         </div>
@@ -314,7 +538,7 @@
             <span id="slideright2" style="margin-right:0px"><img src="replacebox.png"></span>
             
             <span id="panel2">
-                <span><img src="replacebox.png"></span>
+                <span>다크모드테스트</span>
             </span>
         </div>
 
@@ -350,6 +574,13 @@
                 <span><img src="replacebox.png"></span>
             </span>
         </div>
+
+        <fading>
+            <hi>
+            <span>e</span><span>x</span><span>c</span><span>e</span><span>s</span><span>s</span><span>i</span><span>v</span><span>e</span><span>&nbsp;</span><span>e</span><span>n</span><span>e</span><span>r</span><span>g</span><span>y</span><span>&nbsp;</span><span>c</span><span>o</span><span>n</span><span>s</span><span>u</span><span>m</span><span>p</span><span>t</span><span>i</span><span>o</span><span>n</span>
+          </hi>
+          </fading>
+
 
         <div id="texts6" style="position: relative; left:15%; top:20px ">
             
@@ -493,6 +724,35 @@
                 });
                 
             });
+
+            $('.strip').each(function(){
+            var $t = $(this),
+                 rows = $.trim($t.html()).split('<br>');
+
+                $t.html('');
+
+                $.each(rows, function(i, val){
+                    $('<span class="row"></span>').appendTo($t);
+
+                    var letters = $.trim(val).split('');
+
+            $.each(letters, function(j, v){
+                v = (v == ' ') ? '&nbsp;' : v;
+                $('<span>' + $.trim(v) + '</span>').appendTo($('.row:last', $t));
+            });
+
+            });
+        });
+
+            $('h1').click(function(){
+            for (i = 0; i < $('.strip span').length; i++) {
+                (function(ind) {
+                setTimeout(function(){
+            $('.strip span:not(".row")').eq(ind).toggleClass('animate');
+            }, ind * 15);
+            })(i);
+        }
+        }).click();
 
 
         </script>
