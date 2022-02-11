@@ -10,11 +10,12 @@
   </head>
   <body>
     <main>
-      <h3 class="swing"><strong>301D🤢😡🌏🐶</strong> internet homepage</h3>
+      <h3 class="swing"><strong>301D🤢😡🌏🐶 internet homepage</strong></h3>
       <section class="login-form">
         <h1>login</h1>
         {% if user.is_authenticated %} 로그인성공 {{ user.username }}님 환영합니다.
         <a href="{% url 'user:logout' %}">로그아웃</a>
+        <a href="{% url 'user:home' %}">메인페이지로 이동</a>
         {% else %}
         <form action="" method="POST">
           {% csrf_token %}
@@ -35,9 +36,7 @@
         </div>
         {% endif %}
       </section>
-      <p><strong>created by</strong> 301D</p>
-      <ul></ul>
-      <p></p>
+      <p><strong>created by 301D</strong></p>
     </main>
 
     <script>
