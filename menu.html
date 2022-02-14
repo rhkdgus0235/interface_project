@@ -10,8 +10,8 @@
             #slide, #panel {
                 padding: 10px 10px;
                 text-align: center;
-                background-color: #e5eecc;
-                border: solid 1px #c3c3c3;
+                background-color: white;
+                border: solid 5px black;
                 width: 10%;
                 height: 10%;
                 
@@ -22,7 +22,7 @@
             #panel {
                 padding: 10px;
                 display: none;
-                background-color: #e5eecc; 
+                background-color: white; 
                 border-bottom-left-radius: 10%;
                 border-bottom-right-radius: 10%;
                 
@@ -421,7 +421,12 @@
         
 
             
+            
+            .pic { position: absolute; }
+            /* 공을 선택했을 때, 그림자가 생기도록 설정 */
+            .pic:hover { box-shadow: 0 0 10px 0 darkgray; cursor: pointer; }  
         </style>
+        <script src="js/event_handler.js"></script>
         <script>
             // 링크 색 바꾸기
             function LinkSetColor(color){
@@ -460,13 +465,14 @@
                 }
             }
         </script>
-        <div style="text-align: center;">Achieve재배치</div>
+        <div style="padding: 40px;"></div>
+        <div style="font-family: helvetica;font-size: 200px;">Archive</div>
     </head>
  
     <body style="overflow-x: hidden">
         <!-- 메뉴바를 두 부분으로 나누고 마우스를 올릴곳과 나타날 곳을 만들고 이 둘을 묶을 div를 만든다. -->
         <div class="container-fluid sticky-top" style="height: 50px;">
-        <span class="makright2"><a href="https://www.naver.com/"><img src="home.png"></a></span>
+        <!-- <span class="makright2"><a href="https://www.naver.com/"><img src="home.png"></a></span> -->
         <div id="menu" style="margin-top:10px; " class="makright">
             <!-- 마우스가 올라가는 부분 -->
             <div></div>
@@ -488,20 +494,23 @@
         </div>
         </div>
         <div class="container-fluid">
-        <div style="text-align: center;"><img src="achieve.png"></div>
+        <!-- <div style="text-align: center;"><img src="achieve.png"></div>
         <div style="text-align: center;">WHAT WE NEED TO RESERVE</div>
-        <div style="text-align: center;">WHAT WE ACHIEVE</div>
+        <div style="text-align: center;">WHAT WE ACHIEVE</div> -->
         <div class="container mb-3"></div>
         
         <div></div>
         <div style="padding: 100px;"></div>
-        <div style="text-align: center;">해야하는 이유</div>
+        </div>
+        <!-- <div style="text-align: center;">해야하는 이유</div> -->
         <div><hr style="width:90%;" ></div>
+        <!-- 하단바디 -->
+        <div class="container-fluid" style="background-image: url(layer.jpg);background-size: cover;" >
         <div style="padding: 30px 0px;"></div>
-        <marquee style="font-size: 50px; padding: 30px 0px;" scrolldelay="5"><div>왜 why? 나니 웨이션머</div></marquee>
-        <marquee direction="right" style="font-size: 50px; padding: 30px 0px;"><div>왜 why? 나니 웨이션머</div></marquee>
+        <marquee style="font-size: 50px; padding: 30px 0px; color:white" scrolldelay="5"><div>왜 why? 나니 웨이션머</div></marquee>
+        <marquee direction="right" style="font-size: 50px; padding: 30px 0px; color:white"><div>왜 why? 나니 웨이션머</div></marquee>
         <div style="padding: 50px 0px;"></div>
-        <h1 class="strip" style="width: 700px; margin:auto">
+        <h1 class="strip pic" style="width: 700px; margin:auto;left:60%;top:800px">
                 대중들에게 자원과 에너지<br>
                 e.g. 한국은 원자력을 제외한<br>
                 에너지를 생산할수 있는 자원
@@ -532,7 +541,7 @@
         </div>
         <div style="padding: 50px 0px;"></div>
 
-        <div id="texts2" style="position: relative; left:15%; top:20px ">
+        <div id="texts2" style=" left:15%; top:1000px; " class="pic">
             
             
             <span id="slideright2" style="margin-right:0px"><img src="replacebox.png"></span>
@@ -576,7 +585,7 @@
         </div>
 
         <fading>
-            <hi>
+            <hi style="color: white;">
             <span>e</span><span>x</span><span>c</span><span>e</span><span>s</span><span>s</span><span>i</span><span>v</span><span>e</span><span>&nbsp;</span><span>e</span><span>n</span><span>e</span><span>r</span><span>g</span><span>y</span><span>&nbsp;</span><span>c</span><span>o</span><span>n</span><span>s</span><span>u</span><span>m</span><span>p</span><span>t</span><span>i</span><span>o</span><span>n</span>
           </hi>
           </fading>
@@ -623,6 +632,7 @@
 
           </footer>
         <!-- 제이쿼리 가져옴 -->
+        <script src="js/common.js"></script>
         <script  src="static/jquery-3.6.0.min.js"></script>
         <script>
             $(document).ready(function() {
