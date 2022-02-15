@@ -7,22 +7,31 @@
         <link rel="stylesheet" type="text/css" href="static/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="static/style.css" />
         <style> 
+            ul{
+            list-style:none;
+            padding: 0;
+            }
+
+            
+
+
             #slide, #panel {
-                padding: 10px 10px;
+                padding: 15px 0px;
                 text-align: center;
-                background-color: white;
-                border: solid 5px black;
-                width: 10%;
-                height: 10%;
+                background-color: transparent;
+                border-left: solid 3px black;
+                border-bottom: solid 3px black;
+                width: 20%;
+                height: 50%;
                 
                 /* border-top-left-radius: 10%;
                 border-top-right-radius: 10%; */
             }
             /* #penel의 스타일의 기본이 display:none으로 되어 있다.  */
             #panel {
-                padding: 10px;
+                padding: 0px;
                 display: none;
-                background-color: white; 
+                background-color: transparent; 
                 border-bottom-left-radius: 10%;
                 border-bottom-right-radius: 10%;
                 
@@ -30,6 +39,7 @@
             #slideright1, #panel1 {
                 padding: 10px;
                 text-align: center;
+                background-color: white; 
                 margin:0;
                 width: 10%;
                 height: 10%;
@@ -40,6 +50,7 @@
                 margin:0;
                 padding: 10px;
                 display: none;
+                background-color: white; 
                 
                 
                 
@@ -174,7 +185,7 @@
             font-family: Roboto, sans-serif;
             font-weight: 100;
             font-size: 30px;
-            background: linear-gradient(15deg, #00a9f1, #cf00f1);
+            
             margin: 0;
             padding: 30px;
             text-transform: uppercase;
@@ -223,7 +234,60 @@
             
 
 /* h1단 */
+/* h2단 */
+            h2 {
+            font-family: Roboto, sans-serif;
+            font-weight: 100;
+            font-size: 30px;
+            
+            margin: 0;
+            padding: 30px;
+            text-transform: uppercase;
+            }
+            @media (max-width: 700px) {
+            h2 {
+                padding: 20px;
+                font-size: 40px;
+            }
+            }
+            h2 span {
+            display: inline-block;
+            transition: transform 0.6s cubic-bezier(0.65, 0.02, 0.23, 1);
+            transform: translate(20%, 100%);
+            position: relative;
+            z-index: 1;
+            letter-spacing: -0.03em;
+            text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.1);
+            }
+            h2 span:before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            left: 0;
+            width: 30%;
+            height: 30%;
+            transform: translateY(-40%);
+            transition: transform 0.6s cubic-bezier(0.65, 0.02, 0.23, 1);
+            }
+            h2 span.row {
+            overflow: hidden;
+            line-height: 0.9;
+            display: block;
+            transform: none;
+            }
+            h2 span.row:before {
+            display: none;
+            }
+            h2 .animate {
+            transform: translate(0, 0);
+            }
+            h2 .animate:before {
+            transform: translateY(100%);
+            }
 
+
+/* h2단 */
 /* hi단 */
 
             @import url(https://fonts.googleapis.com/css?family=Finger+Paint);
@@ -382,8 +446,8 @@
             }
             .makright{
                 position: relative;
-                left: 85%;
-                top: 10px;
+                left: 81.5%;
+                top: 0px;
             }
             .makright2{
                 position: relative;
@@ -465,34 +529,47 @@
                 }
             }
         </script>
-        <div style="padding: 40px;"></div>
-        <div style="font-family: helvetica;font-size: 200px;">Archive</div>
+         <!-- <div style="padding: 20px;"></div> -->
+        <!-- <div style="font-family: helvetica;font-size: 72px;">Archive</div> -->
     </head>
  
     <body style="overflow-x: hidden">
+        <div class="circle"></div>
         <!-- 메뉴바를 두 부분으로 나누고 마우스를 올릴곳과 나타날 곳을 만들고 이 둘을 묶을 div를 만든다. -->
         <div class="container-fluid sticky-top" style="height: 50px;">
         <!-- <span class="makright2"><a href="https://www.naver.com/"><img src="home.png"></a></span> -->
-        <div id="menu" style="margin-top:10px; " class="makright">
+        <div id="menu" style="margin-top:-10px; " class="makright">
             <!-- 마우스가 올라가는 부분 -->
             <div></div>
-            <div id="slide">메뉴</div>
+            <div id="slide" style=" font-size: 72px;">Menu</div>
             <!-- 처음엔 안보였다 나중에 보이는 부분 -->
             <div id="panel">
                 <ul>
-                    <li>
-                <a href="https://www.naver.com/">하이</a>
+                    <li style="border-bottom:solid black 3px;font-size: 56px; padding-top: 20px;padding-bottom: 22px;">
+                <a href="https://www.naver.com/" style="color: black;">Home</a>
                     </li>
-                    <li>
-                <a href="github.com">니하옹</a>    
+                    <li style="border-bottom:solid black 3px;font-size: 56px; padding-top: 20px;padding-bottom: 22px;">
+                <a href="github.com" style="color: black;">Archive</a>    
                     </li>
-                    <li>
-                <a href="#">하이루</a>
+                    <li style="border-bottom:solid black 3px;font-size: 56px; padding-top: 20px;padding-bottom: 22px;">
+                <a href="#" style="color: black;">Agora</a>
                     </li>
+                    <li style="border-bottom:solid black 3px;font-size: 56px; padding-top: 20px;padding-bottom: 22px;">
+                <a href="#" style="color: black;">Login</a>
+                
+                    </li>
+                    <li style="border-bottom:solid black 3px; padding-top: 80%;padding-bottom: 80%;">
+                        <div>
+
+                        </div>
+                        
+                    </li>
+
                 </ul>
             </div>
         </div>
         </div>
+        <div style="font-family: helvetica;font-size: 72px;position:absolute;left:10px">Archive</div>
         <div class="container-fluid">
         <!-- <div style="text-align: center;"><img src="achieve.png"></div>
         <div style="text-align: center;">WHAT WE NEED TO RESERVE</div>
@@ -500,34 +577,39 @@
         <div class="container mb-3"></div>
         
         <div></div>
-        <div style="padding: 100px;"></div>
+        <!-- <div style="padding: 100px;"></div> -->
         </div>
         <!-- <div style="text-align: center;">해야하는 이유</div> -->
-        <div><hr style="width:90%;" ></div>
+        <!-- <div><hr style="width:90%;" ></div> -->
         <!-- 하단바디 -->
-        <div class="container-fluid" style="background-image: url(layer.jpg);background-size: cover;" >
+        <div class="container-fluid"  >
         <div style="padding: 30px 0px;"></div>
-        <marquee style="font-size: 50px; padding: 30px 0px; color:white" scrolldelay="5"><div>왜 why? 나니 웨이션머</div></marquee>
-        <marquee direction="right" style="font-size: 50px; padding: 30px 0px; color:white"><div>왜 why? 나니 웨이션머</div></marquee>
+        <marquee style="font-size: 20px; padding: 30px 0px; " scrolldelay="5"><div>왜 환경을 지켜야 하는가? 어떻게 에너지 절약을 할 수 있을까? </div></marquee>
+        <marquee direction="right" style="font-size: 20px; padding: 30px 0px; "><div>우리 주변의 친환경 기술은 무엇일까? 환경을 지키기 위한 발전기술은?</div></marquee>
         <div style="padding: 50px 0px;"></div>
-        <h1 class="strip pic" style="width: 700px; margin:auto;left:60%;top:800px">
+        <h1 class="strip pic" style="width: 500px;height: 250px; margin:auto;left:50%;top:250px;background-image: url('img/River.gif');background-size: cover;">
                 대중들에게 자원과 에너지<br>
                 e.g. 한국은 원자력을 제외한<br>
                 에너지를 생산할수 있는 자원
         </h1>
+        <h2 class="strip pic" style="width: 200px;height: 100px; margin:auto;left:40%;top:400px;background:transparent;">
+            에너지 효율<br>
+            
+            
+        </h2>
         <div style="padding: 50px 0px;"></div>
 
         <!-- <div class="container mb-3" style="width: 90%; height: 400px;"></div> -->
         <div style="padding: 50px 0px;"></div>
 
-        <div style="text-align: center;">인트로</div>
-        <div><hr style="width:90%;" ></div>
+        <!-- <div style="text-align: center;">인트로</div>
+        <div><hr style="width:90%;" ></div> -->
         
         
-        <div id="texts1" style="position: relative; left:5%; top:20px ">
+        <div id="texts1" style=" left:17%; top:150px; " class="pic">
             
             
-            <span id="slideright1" style="margin-right:0px"><img src="solar.gif"></span>
+            <span id="slideright1" style="margin-right:0px"><img src="img/Atoms.gif" style="width:300px; height:250px"></span>
             
             <span id="panel1">
                 <span class="container" >ddddddd
@@ -541,86 +623,86 @@
         </div>
         <div style="padding: 50px 0px;"></div>
 
-        <div id="texts2" style=" left:15%; top:1000px; " class="pic">
+        <div id="texts2" style=" left:55%; top:50px; " class="pic">
             
             
-            <span id="slideright2" style="margin-right:0px"><img src="replacebox.png"></span>
+            <span id="slideright2" style="margin-right:0px"><img src="img/Wind-Energy.gif" style="width: 300px;height: 250px;"></span>
             
             <span id="panel2">
                 <span>다크모드테스트</span>
             </span>
         </div>
 
-        <div id="texts3" style="position: relative; left:25%; top:20px ">
+        <div id="texts3" style=" left:10%; top:300px; " class="pic">
             
             
-            <span id="slideright3" style="margin-right:0px"><img src="replacebox.png"></span>
+            <span id="slideright3" style="margin-right:0px"><img src="img/Solar.gif" style="width: 300px;height: 250px;"></span>
             
             <span id="panel3">
-                <span><img src="replacebox.png"></span>
+                <span>ㅎㅇ</span>
             </span>
         </div>
 
-        <div id="texts4" style="position: relative; left:35%; top:20px ">
+        <div id="texts4" style=" left:65%; top:400px; " class="pic">
             
             
-            <span id="slideright4" style="margin-right:0px"><img src="replacebox.png"></span>
+            <span id="slideright4" style="margin-right:0px"><img src="img/energy_save.jpg" style="width: 300px;height: 250px;"></span>
             
             <span id="panel4">
-                <span><img src="replacebox.png"></span>
+                <span>ㅎㅇ</span>
             </span>
         </div>
         <div style="padding: 50px 0px"></div>
-        <div style="text-align: center">에너지절약방법</div>
-        <div><hr style="width:90%; size:10px" ></div>
+        <!-- <div style="text-align: center">에너지절약방법</div>
+        <div><hr style="width:90%; size:10px" ></div> -->
         
-        <div id="texts5" style="position: relative; left:5%; top:20px ">
+        <div id="texts5" style=" left:75%; top:430px; " class="pic">
             
             
-            <span id="slideright5" style="margin-right:0px"><img src="replacebox.png"></span>
+            <span id="slideright5" style="margin-right:0px"><img src="img/notusing.jpg" style="width: 300px;height: 250px;"></span>
             
             <span id="panel5">
-                <span><img src="replacebox.png"></span>
+                <span>ㅎㅇ</span>
             </span>
         </div>
 
         <fading>
-            <hi style="color: white;">
+            <hi >
             <span>e</span><span>x</span><span>c</span><span>e</span><span>s</span><span>s</span><span>i</span><span>v</span><span>e</span><span>&nbsp;</span><span>e</span><span>n</span><span>e</span><span>r</span><span>g</span><span>y</span><span>&nbsp;</span><span>c</span><span>o</span><span>n</span><span>s</span><span>u</span><span>m</span><span>p</span><span>t</span><span>i</span><span>o</span><span>n</span>
           </hi>
           </fading>
 
 
-        <div id="texts6" style="position: relative; left:15%; top:20px ">
+        <div id="texts6" style=" left:55%; top:380px; " class="pic">
             
             
-            <span id="slideright6" style="margin-right:0px"><img src="replacebox.png"></span>
+            <span id="slideright6" style="margin-right:0px"><img src="img/power-outlet.jpg" style="width: 300px;height: 250px;"></span>
             
             <span id="panel6">
-                <span><img src="replacebox.png"></span>
+                <span>ㅎㅇ</span>
             </span>
         </div>
 
-        <div id="texts7" style="position: relative; left:25%; top:20px ">
+        <div id="texts7" style=" left:45%; top:360px; " class="pic">
             
             
-            <span id="slideright7" style="margin-right:0px"><img src="replacebox.png"></span>
+            <span id="slideright7" style="margin-right:0px"><img src="img/car.jpg" style="width: 300px;height: 250px;"></span>
             
             <span id="panel7">
-                <span><img src="replacebox.png"></span>
+                <span>ㅎㅇ</span>
             </span>
         </div>
 
-        <div id="texts8" style="position: relative; left:35%; top:20px ">
+        <div id="texts8" style=" left:25%; top:500px; " class="pic">
             
             
-            <span id="slideright8" style="margin-right:0px"><img src="replacebox.png"></span>
+            <span id="slideright8" style="margin-right:0px"><img src="img/low_power_semi.jpg" style="width: 300px;height: 250px;"></span>
             
             <span id="panel8">
-                <span><img src="replacebox.png"></span>
+                <span>ㅎㅇ</span>
             </span>
         </div>
-        <div style="padding: 50px 0px"></div>
+        <!-- <div style="padding: 400px 0px"></div> -->
 
 
         </div>
@@ -735,6 +817,7 @@
                 
             });
 
+            // h1
             $('.strip').each(function(){
             var $t = $(this),
                  rows = $.trim($t.html()).split('<br>');
@@ -763,7 +846,30 @@
             })(i);
         }
         }).click();
+        // h1
 
+        $('h2').click(function(){
+            for (i = 0; i < $('.strip span').length; i++) {
+                (function(ind) {
+                setTimeout(function(){
+            $('.strip span:not(".row")').eq(ind).toggleClass('animate');
+            }, ind * 15);
+            })(i);
+        }
+        }).click();
+
+
+
+
+        const circle = document.querySelector(".circle");
+
+        document.addEventListener("mousemove", (e) => {
+            var position = $(window).scrollTop();
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+            circle.style.left = mouseX + 'px';
+            circle.style.top = position+mouseY + 'px';
+        });
 
         </script>
     </body>
