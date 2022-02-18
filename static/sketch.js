@@ -9,7 +9,7 @@ let date = [],
 let diagramX, diagramY;
 
 function preload() {
-  table = loadTable("assets/dataset.csv", "csv", "header");
+  table = loadTable("dataset.csv", "csv", "header");
 }
 
 function setup() {
