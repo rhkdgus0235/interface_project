@@ -1,6 +1,6 @@
 {% load static %} {% block content %}
 <!DOCTYPE html>
-<html lnag="ko">
+<html lnag="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -10,9 +10,17 @@
   </head>
   <body>
     <main>
-      <h3 class="swing"><strong>301D🤢😡🌏🐶 internet homepage</strong></h3>
+      <h3 class="swing"><strong>301D</strong>🌳🌻🌏🌈</h3>
+      <iframe
+        width="100%"
+        height="170"
+        scrolling="no"
+        frameborder="no"
+        allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1097443003&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+      ></iframe>
       <section class="login-form">
-        <h1>login</h1>
+        <h1>Login</h1>
         {% if user.is_authenticated %} 로그인성공 {{ user.username }}님 환영합니다.
         <a href="{% url 'user:logout' %}">로그아웃</a>
         <a href="{% url 'user:home' %}">메인페이지로 이동</a>
@@ -28,7 +36,7 @@
             <label for="pw">PASSWORD</label>
           </div>
           <div class="btn-area">
-            <button id="btn" type="submit">LOGIN</button>
+            <button id="btn" type="submit">Login</button>
           </div>
         </form>
         <div class="captioon">
