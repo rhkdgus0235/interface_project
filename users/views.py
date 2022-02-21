@@ -44,3 +44,6 @@ def home_view(request):
     
     return render(request, "users/home.html")
 
+def archive_view(request):
+
+    return render(request, "users/archive.html")
