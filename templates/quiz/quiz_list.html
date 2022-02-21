@@ -68,7 +68,7 @@
         <h2>START BUTTON</h2>
         <div id="center">
         <label class="switch" style="top: 70px;">
-          <input type="checkbox" onclick="setTimeout(function() { 
+          <input type="checkbox" id="a" onclick="setTimeout(function() { 
             location.href='/quiz/1/'; }, 1000);"/>
           <span class="slider round"></span>
         </label>
@@ -88,6 +88,14 @@
   </table>
 </div>
 <script type='text/javascript'>
+  window.onpageshow = function (event) {
+    if (event.persisted) {
+      console.log(event.persisted)
+      document.getElementById('a').checked = false;
+    }
+    else {
+    }
+  }
 </script>
 </body>
 </html>
