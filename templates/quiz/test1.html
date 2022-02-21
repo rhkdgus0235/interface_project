@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'quizlist.css' %}" />
+   <style>
+    .toggleBG{background: #CCCCCC; width: 70px; height: 30px; border: 1px solid #CCCCCC; border-radius: 15px;}
+    .toggleFG{background: #FFFFFF; width: 30px; height: 30px; border: none; border-radius: 15px; position: relative; left: 0px;}
+   </style>
+</head>
+<body style="overflow-y: hidden; overflow-x: hidden"> 
+    <div class='toggleBG'>
+        <button class='toggleFG'></button>
+    </div>
+<script type='text/javascript'>
+    $(document).on('click', '.toggleBG', function () {
+    var toggleBG = $(this);
+    var toggleFG = $(this).find('.toggleFG');
+    var left = toggleFG.css('left');
+    if(left == '40px') {
+        toggleBG.css('background', '#CCCCCC');
+        toggleActionStart(toggleFG, 'TO_LEFT');
+    }else if(left == '0px') {
+        toggleBG.css('background', '#53FF4C');
+        toggleActionStart(toggleFG, 'TO_RIGHT');
+    }
+});
+ 
+// 토글 버튼 이동 모션 함수
+function toggleActionStart(toggleBtn, LR) {
+    // 0.01초 단위로 실행
+    var intervalID = setInterval(
+        function() {
+            // 버튼 이동
+            var left = parseInt(toggleBtn.css('left'));
+            left += (LR == 'TO_RIGHT') ? 5 : -5;
+            if(left >= 0 && left <= 40) {
+                left += 'px';
+                toggleBtn.css('left', left);
+            }
+        }, 10);
+    setTimeout(function(){
+        clearInterval(intervalID);
+    }, 201);
+}
+</script>
+</body>
+</html>
