@@ -13,15 +13,32 @@
       integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
       crossorigin="anonymous"
     />
-    <title>BOARD</title>
+    <title>AGORA</title>
     <style>
-      body { background-color: lightblue; }
+      #AGORA{
+        color: black;
+      }
+     .btn{
+       height: 38px;
+     }
+     #search {
+       top: 20px;
+     }
+     #table {
+       width: 100%;
+       height: 100%;
+     }
+    thead {
+     height: 50px;
+    }
+    td {
+      height: 35px;
+    }
     </style>
   </head> 
   <link rel="stylesheet" href="{% static 'style.css' %}">
   <body>
     {% include "navbar.html" %} {% block content %}{% endblock %}
-    <footer class="mt-5 p-3 bg-light"><h3>301D</h3></footer>
     <script src="{% static 'jquery-3.6.0.min.js' %}"></script>
     <script src="{% static 'bootstrap.min.js' %}"></script>
     {% block script %}
