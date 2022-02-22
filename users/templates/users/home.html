@@ -11,12 +11,13 @@
 </head>
 
 <body>
+  
 
   <div class="topnav">
     <a href="{% url 'user:login' %}">Login</a>
-    <a href="#">Agora</a>
+    <a href="{%url 'pybo:index'%}">Agora</a>
     <a href="{% url 'user:archive' %}">Archive</a>
-    <a href="#">Game</a>
+    <a href="{%url 'quiz:start'%}">Game</a>
 
 
   </div>
@@ -44,7 +45,7 @@
   </div>
 
   </div>
-
+  
 </body>
 
 </html>
