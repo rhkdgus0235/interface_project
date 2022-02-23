@@ -24,13 +24,13 @@ function day_night_handler(self) {
     if (self.value == 'day') {
         BodySetBackgroundColor('RGB(17,17,17)');
         BodySetColor('white');
-        LinkSetColor('powderblue')
+        LinkSetColor('black')
         self.value = 'night';
     }
     else {
         BodySetBackgroundColor('white');
         BodySetColor('black');
-        LinkSetColor('blue')
+        LinkSetColor('black')
         self.value = 'day';
     }
 }
